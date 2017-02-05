@@ -1,7 +1,7 @@
 /* function reads a line to s[] including newline charcter */   
 
-
 #include<stdio.h>
+
 int getlin(char s[], int lim) /* lim is max length of input line  */ 
 {
   int c, i;
@@ -19,3 +19,21 @@ int getlin(char s[], int lim) /* lim is max length of input line  */
   return i;                 /* returns the size of input */ 
 
 }
+
+/*******************************************************************************************************************/
+ 
+/* implementation of it in main  */
+
+#include<stdio.h>
+
+int getlin(char s[], int lim);
+
+int main()
+{   int c;
+    char ar[1000];
+    while ((c=getlin(ar,1000))>0)
+          {
+            printf("%s\n",ar);
+          }
+    return 0;
+ }
